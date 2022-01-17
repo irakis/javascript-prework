@@ -8,6 +8,4 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-let computerMove="kamień";
-let playerMove="papier";
 
