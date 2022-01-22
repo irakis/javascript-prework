@@ -4,17 +4,6 @@ console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = getMoveName(randomNumber);
 
-/*if(randomNumber == 1){
-computerMove = 'kamień';
-}*/
-
-/*	else if(randomNumber == 2){
-cmputerMove = "papier";
-}
-else if (randomNumber == 3){
-computerMove = "nożyce"
-}*/
-
 printMessage('Mój ruch to: ' + computerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
@@ -23,39 +12,14 @@ console.log('Gracz wpisał: ' + playerInput);
 
 let playerMove = getMoveName(playerInput);
 
-
-/* if(playerInput == '1'){
-playerMove = 'kamień';
-}
-
-else if (playerInput == "2") {
-playerMove = "papier"
-}
-
-else if (playerInput == "3") {
-playerMove = "nożyce"
-} */
-
-
 printMessage('Twój ruch to: ' + playerMove);
 
-if (computerMove == "kamień" && playerMove == "papier") {
-	printMessage("Ty wygrywasz!")
-} else if (playerMove == "nożyce" && computerMove == "kamień") {
-	printMessage("Ja wygrywam!")
-}
-if (computerMove == "nożyce" && playerMove == "papier") {
-	printMessage("Ja wygrywam")
-}	else if (computerMove == "nożyce" && playerMove == "kamień") {
-	printMessage("Ty wygrywasz")
-}
-
-if (computerMove == "papier" && playerMove == "nożyce") {
-	printMessage("Ty wygrywasz!")
-} else if (computerMove == "papier" && playerMove == "kamień") {
-	printMessage("Ja wygrywam")
-}
-
-if (computerMove == playerMove) {
+if (computerMove == "kamień" && playerInput == "nożyce") {
+	printMessage("Teraz ja wygrałem")
+} else if (computerMove == "papier" && playerInput == "kamień") {
+	printMessage("Teraz ja wygrałem")
+} else if (computerMove == "nożyce" && playerInput == "papier") {
+	printMessage("Ja wygrałem")
+} else if (computerMove == playerInput) {
 	printMessage("Remis.")
-}
+} else { printMessage("Ty wygrywasz"); }

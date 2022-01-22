@@ -25,21 +25,15 @@ function getMoveName(playerInput) {
 
 function displayResults(argComputerMove, argplayerInput) {
 	printMessage("Zagrałem " + argComputerMove + "a Ty" + argplayerInput)
-	if (argComputerMove == "kamień" && argplayerInput == "papier") {
-		printMessage("Ty wygrałeś")
-	} else if (argComputerMove == "kamień" && argplayerInput == "nożyce") {
+	if (argComputerMove == "kamień" && argplayerInput == "nożyce") {
 		printMessage("Teraz ja wygrałem")
 	} else if (argComputerMove == "papier" && argplayerInput == "kamień") {
 		printMessage("Teraz ja wygrałem")
-	} else if (argComputerMove == "papier" && argplayerInput == "nożyce") {
-		printMessage("Ty wygrywasz")
-	} else if (argComputerMove == "nożyce" && argplayerInput == "kamień") {
-		printMessage("Ty wygrywasz")
 	} else if (argComputerMove == "nożyce" && argplayerInput == "papier") {
 		printMessage("Ja wygrałem")
-	} else (argComputerMove == argplayerInput);{
+	} else if (argComputerMove == argplayerInput) {
 		printMessage("Remis.")
-	}
+	} else { printMessage("Ty wygrywasz"); }
 }
 
 function printMessage(msg) {
