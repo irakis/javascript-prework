@@ -14,12 +14,4 @@ let playerMove = getMoveName(playerInput);
 
 printMessage('Twój ruch to: ' + playerMove);
 
-if (computerMove == "kamień" && playerInput == "nożyce") {
-	printMessage("Teraz ja wygrałem")
-} else if (computerMove == "papier" && playerInput == "kamień") {
-	printMessage("Teraz ja wygrałem")
-} else if (computerMove == "nożyce" && playerInput == "papier") {
-	printMessage("Ja wygrałem")
-} else if (computerMove == playerInput) {
-	printMessage("Remis.")
-} else { printMessage("Ty wygrywasz"); }
+displayResult(computerMove, playerMove)
