@@ -31,7 +31,7 @@ function displayResult(computerMove, playerMove) {
 		printMessage("Teraz ja wygrałem")
 	} else if (computerMove == "nożyce" && playerMove == "papier") {
 		printMessage("Ja wygrałem")
-	} else if (computerMove == playerMove) {
+		} else if (computerMove == playerMove) {
 		printMessage("Remis.")
 	} else if (computerMove == "kamień" && playerMove == "nieznany ruch") {
 		printMessage("Nieznany ruch")
