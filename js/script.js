@@ -1,11 +1,11 @@
-function playGame(computerMove, playerMove) {
+function playGame(playerMove) {
     clearMessages();
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
 
-    //let computerMove = getMoveName(randomNumber);
+    let computerMove = getMoveName(randomNumber);
 
     printMessage('Mój ruch to: ' + computerMove);
 
@@ -13,17 +13,22 @@ function playGame(computerMove, playerMove) {
     console.log('Gracz wpisał: ' + playerInput);
 
     //let playerMove = getMoveName(playerInput);
+    
+    document.getElementById('play-rock').addEventListener('click', function(){
+      playerInput=1;
+      })
+    console.log("co pokazał listener:"+ playerInput)
    
     printMessage('Twój ruch to: ' + playerMove);
 
-    displayResult(computerMove, playerMove)
+    displayResult(computerMove, playerMove);
 }
 document.getElementById('play-rock').addEventListener('click', function(){
-  playGame(computerMove,playerMove);
+  playGame(1);
   })
   document.getElementById('play-paper').addEventListener('click', function(){
-  playGame(computerMove,playerMove);
+  playGame(2);
   })
   document.getElementById('play-scissor').addEventListener('click', function(){
-  playGame(computerMove,playerMove);
+  playGame(3);
   });
