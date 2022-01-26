@@ -1,16 +1,3 @@
-function getMoveName(randomNumber) {
-	if (randomNumber == 1) {
-		return "kamień"
-	} else if (randomNumber == 2) {
-		return "papier"
-	} else if (randomNumber == 3) {
-		return "nożyce"
-	} else {
-		printMessage('Nie znam ruchu o id ' + randomNumber + '.');
-		return 'nieznany ruch';
-	}
-}
-
 function getMoveName(playerMove) {
 	if (playerMove == 1) {
 		return "kamień"
@@ -25,13 +12,13 @@ function getMoveName(playerMove) {
 
 function displayResult(computerMove, playerMove) {
 		printMessage("Zagrałem " + computerMove + " a Ty " + getMoveName(playerMove))
-	if (computerMove == "kamień" && playerMove == "nożyce") {
+	if (computerMove == "kamień" && getMoveName(playerMove) == "nożyce") {
 		printMessage("Teraz ja wygrałem")
-	} else if (computerMove == "papier" && playerMove == "kamień") {
+	} else if (computerMove == "papier" && getMoveName(playerMove) == "kamień") {
 		printMessage("Teraz ja wygrałem")
-	} else if (computerMove == "nożyce" && playerMove == "papier") {
+	} else if (computerMove == "nożyce" && getMoveName(playerMove) == "papier") {
 		printMessage("Ja wygrałem")
-	} else if (computerMove == playerMove) {
+	} else if (computerMove == getMoveName(playerMove)) {
 		printMessage("Remis.")
 	} else { printMessage("Ty wygrywasz"); }
 }

@@ -8,12 +8,13 @@ function playGame(playerMove) {
     let computerMove = getMoveName(randomNumber);
 
     printMessage('Mój ruch to: ' + computerMove);
-
-    //let playerMove = getMoveName(playerInput);
    
     printMessage('Twój ruch to: ' + getMoveName(playerMove));
 
     displayResult(computerMove, playerMove);
+
+    console.log ("widzi argumenty do wyświetlania?" +computerMove +","+playerMove)
+    
 }
 document.getElementById('play-rock').addEventListener('click', function(){
 playGame(1);
