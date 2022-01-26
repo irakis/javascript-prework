@@ -1,6 +1,6 @@
 function getMoveName(randomNumber) {
 	if (randomNumber == 1) {
-		return 'kamień'
+		return "kamień"
 	} else if (randomNumber == 2) {
 		return "papier"
 	} else if (randomNumber == 3) {
@@ -11,12 +11,12 @@ function getMoveName(randomNumber) {
 	}
 }
 
-function getMoveName(playerInput) {
-	if (playerInput == 1) {
+function getMoveName(playerMove) {
+	if (playerMove == 1) {
 		return "kamień"
-	} else if (playerInput == 2) {
+	} else if (playerMove == 2) {
 		return "papier"
-	} else if (playerInput == 3) {
+	} else if (playerMove == 3) {
 		return "nożyce"
 	} else {
 		return "nieznany ruch";
@@ -24,21 +24,15 @@ function getMoveName(playerInput) {
 }
 
 function displayResult(computerMove, playerMove) {
-	printMessage("Zagrałem " + computerMove + " a Ty " + playerMove);
+		printMessage("Zagrałem " + computerMove + " a Ty " + getMoveName(playerMove))
 	if (computerMove == "kamień" && playerMove == "nożyce") {
 		printMessage("Teraz ja wygrałem")
 	} else if (computerMove == "papier" && playerMove == "kamień") {
 		printMessage("Teraz ja wygrałem")
 	} else if (computerMove == "nożyce" && playerMove == "papier") {
 		printMessage("Ja wygrałem")
-		} else if (computerMove == playerMove) {
+	} else if (computerMove == playerMove) {
 		printMessage("Remis.")
-	} else if (computerMove == "kamień" && playerMove == "nieznany ruch") {
-		printMessage("Nieznany ruch")
-	} else if (computerMove == "papier" && playerMove == "nieznany ruch") {
-		printMessage("Nieznany ruch")
-	} else if (computerMove == "nożyce" && playerMove == "nieznany ruch") {
-		printMessage("Nieznany ruch")
 	} else { printMessage("Ty wygrywasz"); }
 }
 
