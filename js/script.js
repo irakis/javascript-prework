@@ -3,18 +3,21 @@ function playGame(playerMove) {
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-    console.log('Wylosowana liczba to: ' + randomNumber);
+        console.log('Wylosowana liczba to: ' + randomNumber);
 
     let computerMove = getMoveName(randomNumber);
 
+    let playerMoveName = getMoveName(playerMove);
+
     printMessage('Mój ruch to: ' + computerMove);
    
-    printMessage('Twój ruch to: ' + getMoveName(playerMove));
+    printMessage('Twój ruch to: ' + playerMoveName);
 
-    displayResult(computerMove, playerMove);
+    console.log("ruch gracza do displaya to: "+playerMoveName);
 
-    console.log ("widzi argumenty do wyświetlania?" +computerMove +","+playerMove)
-    
+    displayResult(computerMove, playerMoveName);
+
+    console.log ("widzi argumenty do wyświetlania?" +computerMove +","+ playerMoveName);
 }
 document.getElementById('play-rock').addEventListener('click', function(){
 playGame(1);

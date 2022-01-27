@@ -11,15 +11,15 @@ function getMoveName(playerMove) {
 }
 
 function displayResult(computerMove, playerMove) {
-		printMessage("Zagrałem " + computerMove + " a Ty " + getMoveName(playerMove))
-	if (computerMove == "kamień" && getMoveName(playerMove) == "nożyce") {
-		printMessage("Teraz ja wygrałem")
-	} else if (computerMove == "papier" && getMoveName(playerMove) == "kamień") {
-		printMessage("Teraz ja wygrałem")
-	} else if (computerMove == "nożyce" && getMoveName(playerMove) == "papier") {
-		printMessage("Ja wygrałem")
-	} else if (computerMove == getMoveName(playerMove)) {
-		printMessage("Remis.")
+		printMessage("Zagrałem " + computerMove + " a Ty " + playerMove)
+	if (computerMove == "kamień" && playerMove == "nożyce") {
+		printMessage("Teraz ja wygrałem");
+	} else if (computerMove == "papier" && playerMove == "kamień") {
+		printMessage("Teraz ja wygrałem");
+	} else if (computerMove == "nożyce" && playerMove == "papier") {
+		printMessage("Ja wygrałem");
+	} else if (computerMove == playerMove) {
+		printMessage("Remis.");
 	} else { printMessage("Ty wygrywasz"); }
 }
 
