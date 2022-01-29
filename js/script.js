@@ -1,4 +1,4 @@
-function playGame(playerMove) {
+    function playGame(playerMove) {
     clearMessages();
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -19,6 +19,7 @@ function playGame(playerMove) {
 
     console.log ("widzi argumenty do wyświetlania?" +computerMove +","+ playerMoveName);
 }
+    
 document.getElementById('play-rock').addEventListener('click', function(){
 playGame(1);
 })

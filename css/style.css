@@ -1,3 +1,40 @@
+body {
+  align-items: center;
+  padding: 25px;
+  font-family: "Gochi Hand", cursive;
+  background: #9522c3;
+  background: linear-gradient(0deg, #9522c3 0%, #fd2d3c 69%);
+}
 
+.container {
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #090979 38%, #00d4ff 100%);
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+ol {
+  padding-left: 25%;
+  padding-right: 25%;
+  text-align: left;
+}
+
+span {
+  color: rebeccapurple;
+}
+
+button {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.starting-text {
+  margin-bottom: 0;
+}
+
+h1 {
+  margin-top: 3px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLG1CQUFBO0VBQ0EsYUFBQTtFQUNBLGtDQUFBO0VBQ0EsbUJBQUE7RUFDQSwwREFBQTtBQ0FKOztBREdBO0VBQ0ksV0FBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtFQUNBLHlFQUFBO0FDQUo7O0FERUE7RUFDSSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7QUNDSjs7QURDQTtFQUNJLG9CQUFBO0FDRUo7O0FEQUE7RUFDSSxrQkFBQTtFQUNBLGlCQUFBO0FDR0o7O0FEREE7RUFDSSxnQkFBQTtBQ0lKOztBREZBO0VBQ0ksZUFBQTtBQ0tKIiwiZmlsZSI6InN0eWxlLmNzcyJ9 */
