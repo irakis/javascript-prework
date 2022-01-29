@@ -1,4 +1,6 @@
 function getMoveName(playerMove) {
+
+
 	if (playerMove == 1) {
 		return "kamień"
 	} else if (playerMove == 2) {
@@ -11,6 +13,9 @@ function getMoveName(playerMove) {
 }
 
 function displayResult(computerMove, playerMove) {
+
+	let computerMove = getMoveName(randomNumber);
+
 		printMessage("Zagrałem " + computerMove + " a Ty " + playerMove)
 	if (computerMove == "kamień" && playerMove == "nożyce") {
 		printMessage("Teraz ja wygrałem");
