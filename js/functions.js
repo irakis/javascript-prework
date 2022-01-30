@@ -1,6 +1,4 @@
 function getMoveName(playerMove) {
-
-
 	if (playerMove == 1) {
 		return "kamień"
 	} else if (playerMove == 2) {
@@ -12,18 +10,18 @@ function getMoveName(playerMove) {
 	}
 }
 
-function displayResult(computerMove, playerMove) {
+function displayResult(randomNumber, playerMoveName) {
 
-	let computerMove = getMoveName(randomNumber);
+	console.log("co widzi funkcja disp?: ",	randomNumber, playerMoveName)
 
-		printMessage("Zagrałem " + computerMove + " a Ty " + playerMove)
-	if (computerMove == "kamień" && playerMove == "nożyce") {
+	printMessage("Zagrałem " + randomNumber + " a Ty " + playerMoveName)
+	if (randomNumber == "kamień" && playerMoveName == "nożyce") {
 		printMessage("Teraz ja wygrałem");
-	} else if (computerMove == "papier" && playerMove == "kamień") {
+	} else if (randomNumber == "papier" && playerMoveName == "kamień") {
 		printMessage("Teraz ja wygrałem");
-	} else if (computerMove == "nożyce" && playerMove == "papier") {
+	} else if (randomNumber == "nożyce" && playerMoveName == "papier") {
 		printMessage("Ja wygrałem");
-	} else if (computerMove == playerMove) {
+	} else if (randomNumber == playerMoveName) {
 		printMessage("Remis.");
 	} else { printMessage("Ty wygrywasz"); }
 }

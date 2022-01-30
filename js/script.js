@@ -1,33 +1,34 @@
-}  
+{
     function playGame(playerMove) {
-    clearMessages();
+        clearMessages();
 
-    let randomNumber = Math.floor(Math.random() * 3 + 1);
+        const randomNumber = Math.floor(Math.random() * 3 + 1);
 
-        console.log('Wylosowana liczba to: ' + randomNumber);
+        console.log ("wylosowana liczba: ",randomNumber);
 
-    
+        const computerMove = getMoveName(randomNumber);
 
-        let playerMoveName = getMoveName(playerMove);
+        console.log('Nazwa ruchu komputera: ' + computerMove);
 
-    printMessage('Mój ruch to: ' + computerMove);
+        const playerMoveName = getMoveName(playerMove);
 
-    printMessage('Twój ruch to: ' + playerMoveName);
+        printMessage('Mój ruch to: ' + computerMove);
 
-    console.log("ruch gracza do displaya to: "+playerMoveName);
+        printMessage('Twój ruch to: ' + playerMoveName);
 
-    displayResult(computerMove, playerMoveName);
+        console.log("ruch gracza do displaya to: " + playerMoveName);
 
-    console.log ("widzi argumenty do wyświetlania?" +computerMove +","+ playerMoveName);
+        displayResult(computerMove, playerMoveName);
+
+        console.log("widzi argumenty do wyświetlania?" + computerMove + "," + playerMoveName);
     }
-    
-    document.getElementById('play-rock').addEventListener('click', function(){
-    playGame(1);
+    document.getElementById('play-rock').addEventListener('click', function () {
+        playGame(1);
     })
-    document.getElementById('play-paper').addEventListener('click', function(){
-    playGame(2);
+    document.getElementById('play-paper').addEventListener('click', function () {
+        playGame(2);
     })
-    document.getElementById('play-scissor').addEventListener('click', function(){
-    playGame(3);
+    document.getElementById('play-scissor').addEventListener('click', function () {
+        playGame(3);
     });
 }
